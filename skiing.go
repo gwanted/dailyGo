@@ -30,15 +30,15 @@ func main() {
 
 }
 
-var fuck [5][5]node
+var fuct [5][5]node
 var mountain [5][5]int
 var path [5][5]int
 
 func dfs(i, j int) int {
-	if fuck[i][j].visit {
-		return fuck[i][j].line
+	if fuct[i][j].visit {
+		return fuct[i][j].line
 	}
-	fuck[i][j].visit = true
+	fuct[i][j].visit = true
 	lens := 0
 	tmp := 0
 	if i+1 <= 4 && mountain[i+1][j] < mountain[i][j] {
@@ -73,6 +73,6 @@ func dfs(i, j int) int {
 		}
 	}
 
-	fuck[i][j].line = lens
+	fuct[i][j].line = lens
 	return lens
 }
